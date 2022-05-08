@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { MyLink} from "./Menu/MenuStyledComponents";
 
 const Navbar = () => {
   return (
@@ -15,9 +16,9 @@ const Navbar = () => {
                 />
               </Link>
             </li>
-            <Link to={"/product"}>
+            <MyLink href="/product">
                 <li>Menu</li>
-            </Link>
+            </MyLink>
             <li>
               <Link to={`/deals`}>
                 <button className="deal-btn">Deal</button>
@@ -36,7 +37,7 @@ const Navbar = () => {
                 />
               </a>
             </li>
-           <Link to={`/login`}> <li>Sign In</li></Link>
+           <MyLink to={`/login`}> <li>Sign In</li></MyLink>
           </div>
           <div className="rb-right-head">
             <li>₹ 0</li>
@@ -53,6 +54,22 @@ const Navbar = () => {
           </div>
         </ul>
       </div>
+
+
+      <div className="headerBottom">
+                <div className="headBottomParent">
+                    <div className="headBottomTxt">LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN</div>
+                    <a href='/menu/beverages'> <button className="redbtn">Start Order</button></a>
+
+
+
+                    
+                        {/* <button className="redbtn">
+                            Start Order
+                        </button> */}
+                    
+                </div>
+            </div>
     </>
   );
 };
