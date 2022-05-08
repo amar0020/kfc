@@ -1,0 +1,29 @@
+
+
+
+.Rs-Menu-top-div{
+    background-color: rgb(41, 40, 40);
+}
+
+.Rs-Menu-top-div>button{
+    background-color: rgb(231, 8, 8);
+}
+
+.Rs-Menu-Logo{
+    display:flex;
+    gap:10%;
+    height:30px;
+}
+
+.Rs-Menu-GridBar{
+   padding:2%
+}
+
+#cart-img{
+  width:10%;
+  /* height:5%; */
+}
+
+h2{
+    margin-bottom: 5px;
+}

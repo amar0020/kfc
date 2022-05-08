@@ -11,6 +11,9 @@ import Modal3 from "./Components/Modal3";
 import Navbar from "./Components/Navbar"
 import Login from './Components/Login'
 import Signup from "./Components/Signup"
+import { MenuPage } from './Components/Menu/MenuPage';
+import { CategoryDisplay } from './Components/Menu/CategoryWiseDisplay';
+import { SearchDataDetails } from './Components/Menu/SearchDataDisplay';
 
 function App() {
   return (
@@ -25,7 +28,11 @@ function App() {
         <Route path="/deals/modal2" element={<Modal2 />} />
         <Route path="/deals/modal3" element={<Modal3 />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup/>} />
+        <Route path="/signup" element={<Signup />} />
+        
+        <Route path="/product" element={<MenuPage />} />
+        <Route path="/product/category/:category" element={<CategoryDisplay />}></Route>
+        <Route path="/product/:id" element={<SearchDataDetails/>}></Route>
 
       </Routes>
       
