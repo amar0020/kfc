@@ -1,0 +1,173 @@
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(200, 200, 200);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.titleCloseBtn {
+  border-bottom: 1px solid black;
+}
+
+.modalContainer {
+  width: 55%;
+  height: 70vh;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.modalContainer .title {
+  /* display: inline-block; */
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* .titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+} */
+
+.titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.modalContainer .body {
+  /* flex: 50%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  text-align: center;
+  margin-top: 2em;
+  font-size: 2.5rem;
+}
+
+/* .modalContainer .footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .modalContainer .footer button {
+  width: 150px;
+  height: 45px;
+  margin: 10px;
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+} */
+
+/* #cancelBtn {
+  background-color: crimson;
+} */
+
+.btn-div {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5em;
+}
+
+.btn-div button {
+  width: 25rem;
+  height: 2.5rem;
+  border-radius: 50px;
+  border: 0;
+  border: 1px solid black;
+}
+
+/* 2nd modal */
+
+#address-text {
+  width: 35rem;
+  height: 2.5rem;
+  border-radius: 25px;
+  border: 0;
+  border: 1px solid grey;
+  padding-left: 1em;
+}
+
+.confirm-btn {
+  width: 8rem;
+  height: 2.6rem;
+  border-radius: 25px;
+  border: 0;
+}
+
+.body-2 {
+  display: flex;
+  gap: 0.3em;
+}
+
+.order-place-div {
+  margin: 3em 0 0 5.5em;
+  font-size: 2rem;
+}
+
+/* Modal 3rd css */
+.body-3 {
+  font-size: 1.5rem;
+  margin: 0 0 0 5.5em;
+}
+.order-type p:nth-child(2) {
+  font-size: 0.7em;
+  margin-top: 1em;
+  padding-bottom: 20px;
+  border-bottom: 1px solid grey;
+}
+
+.order-type {
+  margin-top: 2em;
+}
+
+.confirm-btn-3 {
+  width: 8rem;
+  height: 2.6rem;
+  border-radius: 25px;
+  border: 0;
+  background-color: black;
+  color: white;
+}
+
+.btn-div-3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+}
+.deal-btn {
+  border: 0;
+  background: none;
+  font-size: 1.1em;
+}
+.next-btn-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 12em;
+}
+
+.next-btn {
+  width: 8rem;
+  height: 2.6rem;
+  border-radius: 25px;
+  border: 0;
+  background-color: black;
+  color: white;
+}

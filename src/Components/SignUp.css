@@ -1,0 +1,108 @@
+.Akfc {
+    width: 600px;
+    margin: auto;
+    text-align: center;
+  }
+  .Ahead {
+    font-size: 24px;
+    font-family: "Exo 2", sans-serif;
+    font-weight: bold;
+    margin-top: 40px;
+  }
+  .Asign {
+    font-size: 18px;
+    font-family: "Exo 2", sans-serif;
+    margin-top: 25px;
+  }
+  .Aimgk {
+    margin-top: 50px;
+  }
+  .Ainput {
+    padding: 6px;
+    width: 400px;
+    margin-left: 10px;
+    margin-top: 30px;
+    border-radius: 15px;
+  }
+  .Ainput3{
+    padding: 6px;
+    width: 400px;
+    margin-right: 19px;
+    margin-top: 30px;
+    border-radius: 15px;
+  }
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-size: 14px;
+    opacity: 1; /* Firefox */
+    font-family: "Exo 2", sans-serif;
+    text-align: center;
+  }
+  
+  .button-27 {
+    appearance: none;
+    background-color: #000000;
+    border: 2px solid #1a1a1a;
+    border-radius: 30px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 30px;
+    min-height: 20px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 200px;
+    will-change: transform;
+  }
+  
+  .button-27:disabled {
+    pointer-events: none;
+  }
+  
+  .button-27:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .button-27:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  .Apara{
+    font-size: 14px;
+    margin-top: 25px;
+  
+  }
+  .Abtn2{
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+  width: 400px;
+    border-radius: 25px;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 10px;
+  }
+  .Aorpara{
+    margin-top:30px;
+  }
+  label{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Exo 2", sans-serif;
+  }
