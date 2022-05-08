@@ -1,15 +1,16 @@
 import { RsMenuBtn, RsMenucard } from "./MenuStyledComponents"
 import "./menu.css"
-import { cartContext } from "../../cartcontext/Cartcontex"
+import { Cartcontext } from "../../cartcontext/Cartcontex"
+
+import { useContext } from "react"
 
 export const ProductCard = ({prod,cat}) => {
+
+    const {handleCart} = useContext(Cartcontext)
+
+
     
-    var array = [];
     
-    const handleCart = (prod) => {
-        array.push(prod);
-        console.log(array, "cartArray");
-     }
     return (
         <RsMenucard className="Rs-menuCard" key={prod._id}>
         <div>
@@ -23,7 +24,7 @@ export const ProductCard = ({prod,cat}) => {
         
         <RsMenuBtn onClick={()=>handleCart(prod)}>Add to cart
             <img id="cart-img" src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" /></RsMenuBtn>
-    </RsMenucard>
+        </RsMenucard>
 
     )
 }

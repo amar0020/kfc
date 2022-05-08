@@ -12,11 +12,13 @@ export const Cartcontextprovider = ({children})=>{
         setStatus(status1)
     })
 
-    const [cartArr, setCartArr] = useState([]);
+    const [cartarr, setCartarr] = useState([]);
     const handleCart = (prod) => {
-        setCartArr(prod);
-        console.log(cartArr, "cartArray");
+
+        cartarr.push(prod)
+        setCartarr(cartarr);
+        console.log(cartarr, "cartArray");
      }
-    return <Cartcontext.Provider value={{status,uid,handlecartchange,cartArr,setCartArr,handleCart}}>{children}</Cartcontext.Provider>
+    return <Cartcontext.Provider value={{status,uid,cartarr,handlecartchange,handleCart}}>{children}</Cartcontext.Provider>
 }
 

@@ -34,6 +34,8 @@ function App() {
         <Route path="/product/category/:category" element={<CategoryDisplay />}></Route>
         <Route path="/product/:id" element={<SearchDataDetails/>}></Route>
 
+        <Route path="/cart" element={<></>}></Route>
+
       </Routes>
       
     </div>
