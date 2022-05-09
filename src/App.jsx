@@ -14,6 +14,10 @@ import Signup from "./Components/Signup"
 import { MenuPage } from './Components/Menu/MenuPage';
 import { CategoryDisplay } from './Components/Menu/CategoryWiseDisplay';
 import { SearchDataDetails } from './Components/Menu/SearchDataDisplay';
+import Footer from './Components/Footer';
+import Cart from "./Components/Cart"
+
+import {CheckoutPage} from "./Components/CheckoutPage"
 
 function App() {
   return (
@@ -34,9 +38,12 @@ function App() {
         <Route path="/product/category/:category" element={<CategoryDisplay />}></Route>
         <Route path="/product/:id" element={<SearchDataDetails/>}></Route>
 
-        <Route path="/cart" element={<></>}></Route>
+        <Route path="/cart" element={<Cart/>}></Route>
 
+        <Route path="/checkout" element={<CheckoutPage/>}></Route>
       </Routes>
+
+      <Footer></Footer>
       
     </div>
   );

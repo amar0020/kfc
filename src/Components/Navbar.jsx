@@ -5,8 +5,8 @@ import { MyLink} from "./Menu/MenuStyledComponents";
 
 const Navbar = () => {
 
-  const {id,Cartarr}=useContext(Cartcontext)
-
+  const {id,Cart}=useContext(Cartcontext)
+  
 
   function setcart(){
     

@@ -12,13 +12,35 @@ export const Cartcontextprovider = ({children})=>{
         setStatus(status1)
     })
 
-    const [cartarr, setCartarr] = useState([]);
-    const handleCart = (prod) => {
+    const [cartItems, setCartItems] = useState([]);
+    const onAdd = (product) => {
+      const exist = cartItems.find((x) => x.id === product.id);
+      if (exist) {
+        setCartItems(
+          cartItems.map((x) =>
+            x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+          )
+        );
+      } else {
+        setCartItems([...cartItems, { ...product, qty: 1 }]);
+        }
+        alert("1 Item have been added to cart");
+    };
+    const onRemove = (product) => {
+      const exist = cartItems.find((x) => x.id === product.id);
+      if (exist.qty === 1) {
+        setCartItems(cartItems.filter((x) => x.id !== product.id));
+      } else {
+        setCartItems(
+          cartItems.map((x) =>
+            x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+          )
+        );
+      }
+    }
 
-        cartarr.push(prod)
-        setCartarr(cartarr);
-        console.log(cartarr, "cartArray");
-     }
-    return <Cartcontext.Provider value={{status,uid,cartarr,handlecartchange,handleCart}}>{children}</Cartcontext.Provider>
+    return <Cartcontext.Provider value={{status,uid,handlecartchange,cartItems,setCartItems,onRemove,onAdd}}>{children}</Cartcontext.Provider>
 }
+
+
 

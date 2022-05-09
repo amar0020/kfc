@@ -6,9 +6,8 @@ import { useContext } from "react"
 
 export const ProductCard = ({prod,cat}) => {
 
-    const {handleCart} = useContext(Cartcontext)
 
-
+    const {onAdd}=useContext(Cartcontext)
     
     
     return (
@@ -22,7 +21,7 @@ export const ProductCard = ({prod,cat}) => {
         <h4><span>Rs. </span>{prod.price}<span>.00</span></h4>
         <p>{prod.bonus}</p>
         
-        <RsMenuBtn onClick={()=>handleCart(prod)}>Add to cart
+        <RsMenuBtn onClick={()=>onAdd(prod)}>Add to cart
             <img id="cart-img" src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" /></RsMenuBtn>
         </RsMenucard>
 
