@@ -1,0 +1,74 @@
+.kcontainer {
+    border: 1px solid green;
+    width: 90%;
+    height: 500px;
+    background-color: rgba(32, 33, 36, 255);
+    color: #fff;
+    padding: 0 5% 0 5%;
+  }
+  .krow {
+    display: flex;
+    width: 90%;
+    gap: 1%;
+    justify-content: center;
+    /* border: 1px solid rgb(226, 56, 56); */
+    position: relative;
+  }
+  .kcol {
+    width: 100%;
+    text-align: left;
+    text-justify: center;
+    /* border: 1px solid red; */
+    position: relative;
+  }
+  .klist {
+    margin: -10px -5px;
+    padding: 0px 5px 0px 5px;
+    /* border: 1px solid blue; */
+    list-style-type: none;
+    width: 50%;
+    position: relative;
+  }
+  .ksymbol {
+    position: relative;
+    display: flex;
+    margin-left: 100px;
+  }
+  .ksymbol div {
+    position: relative;
+    /* border: 1px solid red; */
+    margin: 0px 7px;
+    background-color: rgba(228, 0, 43, 255);
+    color: rgba(228, 0, 43, 255);
+    height: 40px;
+    font-size: 12px;
+    position: relative;
+  }
+  .kdeals {
+    display: flex;
+    gap: 500px;
+    margin-left: 20px;
+    position: relative;
+  }
+  .klinks {
+    display: flex;
+    gap: 10%;
+  }
+  .klast {
+    display: flex;
+    gap: 35%;
+    margin: 170px 0px 0 400px;
+    position: relative;
+    font-size: 14px;
+  }
+  .kapps button{
+      width: 100px;
+      height: 30px;
+      background-color: blue;
+      border-radius: 5px;
+  }
+  .kapps a{
+    color: #fff;
+    text-decoration: none;
+  }
+  
