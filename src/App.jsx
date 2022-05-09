@@ -14,7 +14,7 @@ import Signup from "./Components/Signup"
 import { MenuPage } from './Components/Menu/MenuPage';
 import { CategoryDisplay } from './Components/Menu/CategoryWiseDisplay';
 import { SearchDataDetails } from './Components/Menu/SearchDataDisplay';
-
+import Footer from './Components/Footer';
 function App() {
   return (
     <div className="App">
@@ -35,7 +35,7 @@ function App() {
         <Route path="/product/:id" element={<SearchDataDetails/>}></Route>
 
       </Routes>
-      
+      <Footer></Footer>
     </div>
   );
 }
