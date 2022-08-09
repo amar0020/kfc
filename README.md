@@ -1,3 +1,20 @@
+## Masai Construct Week Group Project - KFC Clone
+# You can have a look of our website by clicking on https://kfc-clonemasai.netlify.app/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
