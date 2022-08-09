@@ -32,15 +32,13 @@ export const Form2 = () => {
 
         console.log(uid,status)
   
-      if (data.message === "Login successful") {
+      if (data.message === "Login successful") 
         handlecartchange(data.id, "true")
-        // alert(data.message);
-        window.location.href = "/";
-      }
-      else {
+        
+      
         console.log(uid, status);
-        // alert(data.message) 
-      }
+        alert(data.message) 
+      
     })
   };
 
