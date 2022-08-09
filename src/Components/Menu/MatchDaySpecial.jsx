@@ -1,7 +1,8 @@
-import { GridCol2} from "./MenuStyledComponents"
+import { GridCol2, MyLink} from "./MenuStyledComponents"
 import { useEffect } from "react"
 import { useState } from "react"
 import { ProductCard } from "./ProductCard"
+import { Link } from "react-router-dom"
 
 export const MatchDaySpecial = ({category,grid}) => {
     const [data, setData] = useState([]);
@@ -39,7 +40,9 @@ console.log(category,"menuCategory")
                 map((e) => {
                     return (
                         <div key={e._id}>
-                            <ProductCard prod={e} />
+                            <MyLink to={`/product/${e.id}`}>
+                                <ProductCard prod={e} />
+                                </MyLink>
                         </div>
                
                 )
