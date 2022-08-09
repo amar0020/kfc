@@ -1,5 +1,5 @@
-## Masai Construct Week Group Project - KFC Clone
-# You can have a look of our website by clicking on https://kfc-clonemasai.netlify.app/
+#Masai Construct Week Group Project - KFC Clone
+## You can have a look of our website by clicking on https://kfc-clonemasai.netlify.app/
 
 
 
