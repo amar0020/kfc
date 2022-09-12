@@ -1,9 +1,10 @@
 
-import { useState } from "react"
+import { useContext, useState } from "react"
 // import cardlogo from "./images/cardlogo.png"
 import axios from "axios"
 import "./checkout.css"
 import { Link } from "react-router-dom"
+import { Cartcontext } from "../cartcontext/Cartcontex"
 
 export const CheckoutPage=()=>{
  const [data,setdata]=useState(false)
@@ -31,8 +32,13 @@ export const CheckoutPage=()=>{
   })
   subcheck(true)
  }
-    
-
+  
+ const {cartItems}=useContext(Cartcontext);
+const handleConfirm=()=>{
+    alert(`Thank you for ordering. Your order is being prepared`);
+    window.location.href="/";
+    cartItems=[];
+}
    
 
     return(
@@ -110,14 +116,9 @@ export const CheckoutPage=()=>{
              
             </div>
             <div className="conti">
-            <Link to={`/final`} >
-            <button className="continue">Continue</button>
-            </Link>
+            <button className="continue" onClick={handleConfirm}>Confirm Payment</button>
              <br></br> 
-            --------------Or---------------  
-            <div className="end">
-            Skip the free trial and buy a Prime membership without auto-renew. (All electronic payment methods eligible)
-            </div>
+            
              </div>
             </>
     )

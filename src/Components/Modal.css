@@ -1,12 +1,13 @@
 .modalBackground {
   width: 100vw;
-  height: 100vh;
+  height:max-content;
   background-color: rgba(200, 200, 200);
-  position: fixed;
+  /* position: fixed; */
   display: flex;
   justify-content: center;
   align-items: center;
   color: black;
+ 
 }
 
 .titleCloseBtn {
@@ -15,13 +16,14 @@
 
 .modalContainer {
   width: 55%;
-  height: 70vh;
+  height: max-content;
   border-radius: 12px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   flex-direction: column;
   padding: 25px;
+  margin:5% auto;
 }
 
 .modalContainer .title {
@@ -39,7 +41,7 @@
 .titleCloseBtn button {
   background-color: transparent;
   border: none;
-  font-size: 25px;
+  font-size: 22px;
   cursor: pointer;
 }
 

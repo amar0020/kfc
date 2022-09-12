@@ -33,9 +33,10 @@ export const SideNavbar = () => {
                 </StyledLink>
 
             {/* data --side navbar categories */}
+
             {categories.map((e) => {
                 return (
-                    <div key={e}>
+                    <div key={e} >
                      <StyledLink to={`/product/category/${e}`}>
                         <p  style={{ color: "black" }}>{e}</p>
                         </StyledLink>

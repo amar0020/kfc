@@ -38,7 +38,8 @@ useEffect(()=>{
 
   return (
     <>
-      <div className="rb-header">
+      <div className="rb-header" 
+      style={{position:"sticky",top:"0",zIndex:"1",backgroundColor:"white"}}>
         <ul>
           <div className="rb-logo-part">
             <li>
@@ -98,7 +99,7 @@ useEffect(()=>{
       <div className="headerBottom">
                 <div className="headBottomParent">
                     <div className="headBottomTxt">LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN</div>
-                    <a href='/menu/beverages'> <button className="redbtn">Start Order</button></a>
+                    <a href='#'> <button className="redbtn">Start Order</button></a>
 
 
 

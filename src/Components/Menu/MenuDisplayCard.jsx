@@ -41,9 +41,9 @@ export const MenuDisplayCard = ({category,grid}) => {
                 map((e) => {
                     return (
                         <div key={e._id}>
-                            <Link to={`/product/${e.id}`}>
+                            {/* <Link to={`/product/${e.id}`}> */}
                             <ProductCard prod={e} />
-                            </Link>
+                            {/* </Link> */}
 
                         </div>
         
