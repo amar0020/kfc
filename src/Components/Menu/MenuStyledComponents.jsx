@@ -59,19 +59,20 @@ export const GridDiv = styled.div`
     border:1px solid red;
 `
 export const GridCol2= styled.div`
-    display:grid;
-    grid-template-columns:repeat(2,48%);
-    gap:1%;
+    display:flex;
+    flex-wrap:wrap;
+    row-gap:1%;
+    column-gap:1%;
     border:1px sold gray;
     background-color: #f1eeee;
-
-    height:fit-content;
-    margin:auto;
+    max-height:auto;
 `
 export const GridCol3= styled.div`
-    display:grid;
-    grid-template-columns:repeat(3,auto);
-    gap:2%;
+        display:flex;
+    flex-wrap:wrap;
+    row-gap:1%;
+    column-gap:1%;
+
     border:1px sold gray;
     background-color: #f1eeee;
 
@@ -81,11 +82,14 @@ export const GridCol3= styled.div`
 
 // menucard div
 export const RsMenucard = styled.div`
+width:250px;
 padding-left:3%;
 border:transparent;
-height:450px;
+height:auto;
 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-margin-bottom:1%
+margin-bottom:1%;
+padding:4%;
+
 
 & div{
     height:30%;
@@ -95,7 +99,6 @@ margin-bottom:1%
 & img {
     width:90%;
     height:100%;
-    
 }
 `
 

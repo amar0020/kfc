@@ -23,7 +23,9 @@ export const Cartcontextprovider = ({children})=>{
         );
       } else {
         setCartItems([...cartItems, { ...product, qty: 1 }]);
+
       }
+
     };
     const onRemove = (product) => {
       const exist = cartItems.find((x) => x.id === product.id);
@@ -37,6 +39,9 @@ export const Cartcontextprovider = ({children})=>{
         );
       }
     }
+
     return <Cartcontext.Provider value={{status,uid,handlecartchange,cartItems,setCartItems,onRemove,onAdd}}>{children}</Cartcontext.Provider>
 }
+
+
 

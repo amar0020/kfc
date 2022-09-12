@@ -1,7 +1,16 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { Cartcontext } from "../cartcontext/Cartcontex";
 import { MyLink} from "./Menu/MenuStyledComponents";
 
 const Navbar = () => {
+
+  const {id,Cart}=useContext(Cartcontext)
+  
+
+  function setcart(){
+    
+  }
   return (
     <>
       <div className="rb-header">
@@ -37,20 +46,21 @@ const Navbar = () => {
                 />
               </a>
             </li>
-           <MyLink to={`/login`}> <li>Sign In</li></MyLink>
+           <Link to={`/login`}> <li>Sign In</li></Link>
           </div>
           <div className="rb-right-head">
             <li>₹ 0</li>
-            <li>
-              <a href="#">
+            <Link to={"/cart"}><li onClick={()=>{
+                  setcart()
+            }}>
                 <img
                   className="rb-combo-logo"
                   src="https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg"
                   alt=""
                   srcset=""
                 />
-              </a>
             </li>
+            </Link> 
           </div>
         </ul>
       </div>

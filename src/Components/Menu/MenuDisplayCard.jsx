@@ -3,6 +3,7 @@ import {GridCol3 } from "./MenuStyledComponents"
 import { useEffect } from "react"
 import { useState } from "react"
 import { ProductCard } from "./ProductCard"
+import { Link } from "react-router-dom"
 
 export const MenuDisplayCard = ({category,grid}) => {
     const [data, setData] = useState([]);
@@ -40,9 +41,12 @@ console.log(category,"menuCategory")
                 map((e) => {
                     return (
                         <div key={e._id}>
+                            <Link to={`/product/${e.id}`}>
                             <ProductCard prod={e} />
+                            </Link>
+
                         </div>
-               
+        
                 )
             })}
         </GridCol3>
