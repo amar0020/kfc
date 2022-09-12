@@ -23,8 +23,9 @@ export const Cartcontextprovider = ({children})=>{
         );
       } else {
         setCartItems([...cartItems, { ...product, qty: 1 }]);
-        }
-        alert("1 Item have been added to cart");
+
+      }
+
     };
     const onRemove = (product) => {
       const exist = cartItems.find((x) => x.id === product.id);

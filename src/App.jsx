@@ -15,6 +15,7 @@ import { MenuPage } from './Components/Menu/MenuPage';
 import { CategoryDisplay } from './Components/Menu/CategoryWiseDisplay';
 import { SearchDataDetails } from './Components/Menu/SearchDataDisplay';
 import Footer from './Components/Footer';
+
 import Cart from "./Components/Cart"
 
 import {CheckoutPage} from "./Components/CheckoutPage"
@@ -43,8 +44,9 @@ function App() {
         <Route path="/checkout" element={<CheckoutPage/>}></Route>
       </Routes>
 
+
       <Footer></Footer>
-      
+
     </div>
   );
 }

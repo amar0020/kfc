@@ -1,4 +1,5 @@
 import React from "react";
+
 import { useContext } from "react";
 import { Cartcontext } from "../cartcontext/Cartcontex";
 import "./Cart.css"
@@ -8,6 +9,7 @@ export default function Basket(props) {
     const { cartItems, onAdd, onRemove} = useContext(Cartcontext);
     console.log(cartItems)
     //   const { cartItems, onAdd, onRemove } = props;
+
   const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
   const taxPrice = itemsPrice * 0.14;
   const shippingPrice = itemsPrice > 2000 ? 0 : 20;
@@ -16,6 +18,7 @@ export default function Basket(props) {
     <aside className="block col-1">
       <h2>Cart Items</h2>
       <div>
+
               {cartItems.length === 0 && <div>Cart is empty</div>}
               <div>
         {cartItems.map((item) => (
@@ -53,16 +56,18 @@ export default function Basket(props) {
         ))}
         </div>
 
+
         {cartItems.length !== 0 && (
           <>
             <hr></hr>
             <div className="row">
-              <div className="col-2">Items Price</div>
+
               <div className="col-1 text-right">Rs {itemsPrice.toFixed(2)}</div>
             </div>
             <div className="row">
               <div className="col-2">Tax Price</div>
               <div className="col-1 text-right">Rs {taxPrice.toFixed(2)}</div>
+
             </div>
             <div className="row">
               <div className="col-2">Delivery Charges</div>
@@ -76,19 +81,24 @@ export default function Basket(props) {
                 <strong>Total Price</strong>
               </div>
               <div className="col-1 text-right">
+
                 <strong>Rs {totalPrice.toFixed(2)}</strong>
+
               </div>
             </div>
             <hr />
             <div className="row">
+
               <Link to="/checkout"><RsMenuBtn>
                 Checkout
                           </RsMenuBtn>
                           </Link>
+
             </div>
           </>
         )}
       </div>
     </aside>
   );
+
 }
