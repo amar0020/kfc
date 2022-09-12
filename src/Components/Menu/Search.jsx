@@ -10,7 +10,7 @@ export const Search = () => {
 
     const handleSearch = (e) => {
         setText(e.target.value);
-        console.log(text)
+        // console.log(text)
         e.preventDefault();
 
         fetch(`https://gentle-escarpment-82476.herokuapp.com/product`).
@@ -19,7 +19,7 @@ export const Search = () => {
                    return response.json()
                 // }
             }).then(data1 => {
-                console.log(data1,"data1")
+                // console.log(data1,"data1")
                 setData(data1)
             })
         // axios.get(`https://gentle-escarpment-82476.herokuapp.com/product`).then(({ data }) => {
@@ -35,7 +35,7 @@ export const Search = () => {
             return e.name.toLocaleLowerCase().includes(text)
         }
     })
-    console.log(filteredData,"fd")
+    // console.log(filteredData,"fd")
   
     
 

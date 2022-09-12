@@ -17,7 +17,7 @@ export const SearchDataDetails = () => {
         then(response => {
              return response.json()
         }).then(data1 => {
-            console.log(data1,"data1")
+            // console.log(data1,"data1")
             setData(data1)
         })
 

@@ -1,16 +1,41 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { Cartcontext } from "../cartcontext/Cartcontex";
 import { MyLink} from "./Menu/MenuStyledComponents";
 
 const Navbar = () => {
 
-  const {id,Cart}=useContext(Cartcontext)
-  
+  const {id,cartItems}=useContext(Cartcontext);
+  console.log(cartItems);
+
+  const navigate=useNavigate();
+const nameSt=localStorage.getItem("login")?.split(",")||"";
+const email=nameSt[0]?.split(":")[1]?.split("@")[0]||"";
+const [price,setPrice]=useState(0);
+
+useEffect(()=>{
+  let prices=0;
+  cartItems.map((e)=>{console.log(e.price);
+   prices+=Number(e.qty)*Number(e.price)});
+   setPrice(prices);
+},[cartItems])
 
   function setcart(){
-    
+    if(email) return navigate("/cart");
+    else return navigate("/login")
   }
+
+  const handleSign=()=>{
+     if(email){
+        localStorage.clear("login");
+        setPrice(0);
+        navigate("/")
+     }else{
+      navigate("/login")
+     }
+  }
+
   return (
     <>
       <div className="rb-header">
@@ -39,17 +64,21 @@ const Navbar = () => {
           <div className="rb-left-head">
             <li>
               <a href="#">
-                <img
+             
+
+               <img
                   src="https://images.ctfassets.net/wtodlh47qxpt/6bJdGLRkksNvWP4LI9ZiFF/cb89d6393492fd093e0f99980abfa39e/Account_Icon.svg"
                   alt=""
                   srcset=""
                 />
+                 {!email?"":email}
               </a>
+              
             </li>
-           <Link to={`/login`}> <li>Sign In</li></Link>
+           <div onClick={handleSign}> <li>{!email?"Sign In":"Sign Out"}</li></div>
           </div>
           <div className="rb-right-head">
-            <li>₹ 0</li>
+            <li>₹ {price}</li>
             <Link to={"/cart"}><li onClick={()=>{
                   setcart()
             }}>

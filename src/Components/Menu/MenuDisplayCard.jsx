@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 
 export const MenuDisplayCard = ({category,grid}) => {
     const [data, setData] = useState([]);
-console.log(category,"menuCategory")
+// console.log(category,"menuCategory")
     useEffect(() => {
         getData();
     }, [])
@@ -20,7 +20,7 @@ console.log(category,"menuCategory")
                    return response.json()
                 // }
             }).then(data1 => {
-                console.log(data1,"data1")
+                // console.log(data1,"data1")
                 setData(data1)
             })
     //     axios.get(`https://gentle-escarpment-82476.herokuapp.com/product`).then(({data}) => {

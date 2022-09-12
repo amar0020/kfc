@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 
 export const MatchDaySpecial = ({category,grid}) => {
     const [data, setData] = useState([]);
-console.log(category,"menuCategory")
+// console.log(category,"menuCategory")
     useEffect(() => {
         getData();
     }, [])
@@ -18,7 +18,7 @@ console.log(category,"menuCategory")
                return response.json()
             // }
         }).then(data1 => {
-            console.log(data1,"data1")
+            // console.log(data1,"data1")
             setData(data1)
         })
         

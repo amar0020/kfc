@@ -30,15 +30,17 @@ export const Form2 = () => {
       }
     }).then((res)=>res.json()).then((data)=>{
 
-        console.log(uid,status)
+        console.log(uid,status);
+
   
       if (data.message === "Login successful") 
         handlecartchange(data.id, "true")
-        
-      
+        let login={email:formData.email,status:"true"};
+       
+        let x=localStorage.setItem("login",JSON.stringify(login));
         console.log(uid, status);
         alert(data.message) 
-      
+        window.location.href="/";
     })
   };
 

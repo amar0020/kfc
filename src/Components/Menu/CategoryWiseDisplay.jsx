@@ -32,7 +32,7 @@ export const CategoryDisplay= () => {
                return response.json()
             // }
         }).then(data1 => {
-            console.log(data1,"data1")
+            // console.log(data1,"data1")
             setData(data1)
         })
         // axios.get(`https://gentle-escarpment-82476.herokuapp.com/product`).then(({ data }) => {

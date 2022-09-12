@@ -42,11 +42,18 @@ const Signup = () => {
       handlecartchange(data.id,"true")
 
       console.log(uid, status)
-      alert(data.message)
+      alert(data.message);
+      window.location.href="/login";
   })
   };
 
   return (
+    <div style={{
+      // border:"1px solid red",
+      width:"max-content",
+      padding:"2%",
+      textAlign:"center",
+      margin:"auto"}}>
     <form onSubmit={handleSubmit}>
       <label>Name:</label>
 
@@ -94,6 +101,7 @@ const Signup = () => {
       <p className="Aorpara">or</p>
       <button className="Abtn2">Skip, Continue As Guest</button>
     </form>
+    </div>
   );
 };
 

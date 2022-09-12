@@ -14,6 +14,7 @@ export const Cartcontextprovider = ({children})=>{
 
     const [cartItems, setCartItems] = useState([]);
     const onAdd = (product) => {
+      console.log(product,"add")
       const exist = cartItems.find((x) => x.id === product.id);
       if (exist) {
         setCartItems(
